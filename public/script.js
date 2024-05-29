@@ -94,7 +94,7 @@ async function saveCodes() {
     }
 
     try {
-        const response = await fetch('/save-codes', {
+        const response = await fetch('https://eorehosting-rjrr53pxea-as.a.run.app//save-codes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
