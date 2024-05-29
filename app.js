@@ -15,8 +15,8 @@ const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.INSTANCE_CONNECTION_NAME ? `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}` : process.env.DB_HOST,
     database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT || 5432, // default PostgreSQL port
+    password: "#g%~@Hn)Pr9Sc@/]",
+    port: process.env./cloudsql/eorecodegenerator:asia-southeast1:sroyeore/.s.PGSQL.5432 || 5432, // default PostgreSQL port
 });
 
 // Function to pad numbers
