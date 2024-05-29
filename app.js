@@ -59,6 +59,9 @@ app.post('/generate-codes', async (req, res) => {
             // Generate new codes
             const { codes, newStartingNumber } = generateCodes(parseInt(numberOfCodes), currentNumber, team);
 
+            // Log the generated codes
+            console.log('Generated codes:', codes);
+
             // Send the generated codes as response
             res.json({ codes: codes, newStartingNumber: newStartingNumber });
         } finally {
@@ -81,6 +84,8 @@ app.post('/save-codes', async (req, res) => {
             const insertValues = codes.map(code => [code.code, code.team, code.date]);
 
             for (const value of insertValues) {
+                // Log each value being inserted
+                console.log('Inserting value:', value);
                 await client.query(insertQuery, value);
             }
 
