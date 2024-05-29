@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // PostgreSQL pool setup
 const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.INSTANCE_CONNECTION_NAME ? `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}` : process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: "#g%~@Hn)Pr9Sc@/]",
-    port: process.env./cloudsql/eorecodegenerator:asia-southeast1:sroyeore/.s.PGSQL.5432 || 5432, // default PostgreSQL port
+    user: 'postgres',
+    host: '34.87.138.19',
+    database: 'postgres',
+    password: '#g%~@Hn)Pr9Sc@/]',
+    port: 5432, // default PostgreSQL port
 });
 
 // Function to pad numbers
