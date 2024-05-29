@@ -119,7 +119,7 @@ document.getElementById('codeForm').addEventListener('submit', async function(ev
     var team = document.getElementById('team').value;
 
     try {
-        const response = await fetch('https://eorehosting-rjrr53pxea-as.a.run.app/generate-codes', {
+        const response = await fetch('/generate-codes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
