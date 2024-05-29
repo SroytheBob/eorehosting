@@ -100,7 +100,6 @@ app.post('/save-codes', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(10000, () => {
+    console.log('Server is running on port 10000');
 });
