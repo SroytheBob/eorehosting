@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EORE Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>EORE Code Generator</h1>
+    <form id="codeForm">
+        <label for="numberOfCodes">Enter the number of codes to generate (max: 100):</label><br>
+        <input type="number" id="numberOfCodes" name="numberOfCodes" min="1" max="100" required><br>
+        <label for="team">Select team:</label><br>
+        <select id="team" name="team">
+            <option value="MRE01">MRE01</option>
+            <option value="MRE02">MRE02</option>
+            <option value="MRE03">MRE03</option>
+            <option value="SEOD01">SEOD01</option>
+            <option value="SEOD02">SEOD02</option>
+            <option value="SEOD03">SEOD03</option>
+            <option value="SEOD04">SEOD04</option>
+            <option value="SEOD05">SEOD05</option>
+            <option value="SEOD06">SEOD06</option>
+            <option value="SEOD07">SEOD07</option>
+            <option value="SEOD08">SEOD08</option>
+            <option value="SEOD09">SEOD09</option>
+            <option value="SEOD10">SEOD10</option>
+            <option value="SEOD11">SEOD11</option>
+            <option value="SEOD12">SEOD12</option>
+        </select><br>
+        <button type="submit">Generate Codes</button>
+        <button type="button" id="saveButton" style="display:none;">Save Codes</button>
+        <button type="button" id="exportButton" style="display:none;">Export as Image</button>
+    </form>
+    <div id="codes"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
