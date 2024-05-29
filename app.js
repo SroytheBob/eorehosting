@@ -11,15 +11,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // PostgreSQL pool setup
-// const pool = new Pool({
-//     user: 'postgres',
-//     host: '34.87.138.19',
-//     database: 'postgres',
-//     password: '#g%~@Hn)Pr9Sc@/]',
-//     port: 5432, // default PostgreSQL port
-// });
-
-// PostgreSQL pool setup
 const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.INSTANCE_CONNECTION_NAME ? `/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}` : process.env.DB_HOST,
@@ -41,7 +32,7 @@ function pad(number, length) {
 function generateCodes(number, startingNumber, team) {
     var codes = [];
     var currentNumber = startingNumber + 1;
-    var date = new Date().toLocaleDateString();
+    var date = new Date().toISOString().split('T')[0]; // Format date as 'YYYY-MM-DD'
 
     for (var i = 0; i < number; i++) {
         var code = 'EORE' + pad(currentNumber, 5);
